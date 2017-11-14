@@ -44,7 +44,7 @@ class RolesController extends Controller
             ->perms()
             ->sync($request->get('permissions'));
 
-        return redirect()->route('roles.create');
+        return redirect()->route('roles.create')->with(['flash_message'=>'sdsdsdsds']);
     }
 
     public function edit($id)

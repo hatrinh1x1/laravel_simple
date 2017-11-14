@@ -1,5 +1,7 @@
+<div class="col-md-12 col-md-offset-11">
+    <a href="{{route('products.index')}}" class="btn btn-info">View</a>
+</div>
 @include('errors.list')
-<div class="container">
     <div class="form-group">
         {!! Form::label ('name','Name',array('class'=>'control-label col-sm-2'))!!}
         <div class="col-sm-8">
@@ -31,5 +33,6 @@
             ['class' => 'form-control select-all','multiple','required']) !!}
         </div>
     </div>
+    <div class="form-group">
         {!! Form::submit($submitButtonText,['class'=>'btn btn-info col-sm-offset-6']) !!}
-</div>
+    </div>

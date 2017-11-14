@@ -5,7 +5,9 @@
     <h2 class="text-center">Permissions</h2>
     <div class="space50">&nbsp;</div>
 
-    <a href="{{route('permissions.create')}}" class="btn btn-info">Add new</a>
+    <div class="col-md-12 col-md-offset-0">
+        <a href="{{route('permissions.create')}}" class="btn btn-info">Add new</a>
+    </div>
     <div class="space50">&nbsp;</div>
 
     <table id="users-table" class="table">

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container" style="background:#f8f9fd">
+    <div class="container">
         <header>
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
@@ -21,7 +21,9 @@
                     </div>
                     <ul class="nav navbar-nav">
                         <li><a href="#">Home</a></li>
+                        @role('admin')
                         <li><a href="{{route('categories.index')}}">Categories</a></li>
+                        @endrole
                         <li><a href="{{route('products.index')}}">Products</a></li>
                         <li><a href="{{route('permissions.index')}}">Permissions</a></li>
                         <li><a href="{{route('roles.index')}}">Roles</a></li>
@@ -56,7 +58,12 @@
                 </div>
             </nav>
         </header>
-        <div class="container">
+        <div class="panel panel-default">
+            @if(Session::has('flash_message'))
+                <div class="alert alert-success">
+                    {!! Session::get('flash_message') !!}
+                </div>
+            @endif
             @yield('content')
         </div>
         <div class="space50">&nbsp;</div>
@@ -71,6 +78,7 @@
         placeholder_text_multiple:'sdsdsdsds'
     });
     @yield('js')
+    $("div.alert").delay(3000).slideUp();
 </script>
 </body>
 </html>

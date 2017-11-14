@@ -38,18 +38,18 @@ return [
     'facebook' => [
         'client_id' => '195593334319486',
         'client_secret' => '6336709c9527c7ceab79e7a8c149de9f',
-        'redirect' => 'http://local.simple.laravel/login/facebook/callback',
+        'redirect' => 'http://local.simple.com/login/facebook/callback',
     ],
 
     'google' => [
         'client_id' => '1098850847951-c5qsina8nco4m26adfq9a5h6rdea17bn.apps.googleusercontent.com',
         'client_secret' => 'A4Qto5LNPxoEnA39eC9ZTBLM',
-        'redirect' => 'http://local.simple.laravel/login/google/callback',
+        'redirect' => 'http://local.simple.com/login/google/callback',
     ],
 
     'twitter' => [
         'client_id' => 'pFNaq5VcZH5CV7aCGZndh4XeT',
         'client_secret' => 'lyRnbECIBuX7hI9FoXmm7ssnYE5AaTO89bVBDDPuFT1BYOCj9X',
-        'redirect' => 'http://local.simple.laravel/login/twitter/callback',
+        'redirect' => 'http://local.simple.com/login/twitter/callback',
     ],
 ];

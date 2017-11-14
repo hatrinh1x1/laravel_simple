@@ -41,11 +41,6 @@ Route::group(['middleware' => 'auth'], function ()
         'as' => 'roles.remove'
     ]);
 
-    Route::get('/home', [
-        'uses' => 'HomeController@index',
-        'as' => 'home'
-    ]);
-
     Route::get('/index', [
         'uses' => 'PageController@getIndex',
         'as' => 'page.index'
@@ -60,8 +55,8 @@ Route::group(['middleware' => 'auth'], function ()
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+

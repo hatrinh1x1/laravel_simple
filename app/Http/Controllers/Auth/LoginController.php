@@ -77,7 +77,7 @@ class LoginController extends Controller
         else
             $user = $socialProvider->user;
         auth()->login($user);
-        return redirect('/home');
+        return redirect('/');
     }
 
 }
